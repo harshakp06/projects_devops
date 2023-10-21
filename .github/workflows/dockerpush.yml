@@ -22,7 +22,7 @@ jobs:
         #id: vars
         run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
-      - run: echo $GITHUB_OUTPUT
+      - run: echo ${{ GITHUB_OUTPUT }}
 
       -
         name: Set up QEMU
@@ -43,4 +43,4 @@ jobs:
          # context: "{{defaultContext}}:project1"
           file: ./project1/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2048-k8s:$GITHUB_OUTPUT
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2048-k8s:${{ GITHUB_OUTPUT }}
