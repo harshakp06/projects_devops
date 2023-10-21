@@ -17,6 +17,6 @@ spec:
       containers:
       - name: app-2048
         imagePullPolicy: Always
-        image: 
+        image: harshakp06/2048-k8s:6e3a53f
         ports:
         - containerPort: 80
