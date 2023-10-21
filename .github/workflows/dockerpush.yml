@@ -33,6 +33,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v5
         with:
-          context: .
+         # context: "{{defaultContext}}:project1"
+          file: ./project1/Dockerfile
           push: true
-          tags: harshakp06/2048-k8s:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2048-k8s:latest
