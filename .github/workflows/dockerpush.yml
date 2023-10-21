@@ -45,4 +45,4 @@ jobs:
          # context: "{{defaultContext}}:project1"
           file: ./project1/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2048-k8s:${{ SHA_SHORT }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2048-k8s:$SHA_SHORT
