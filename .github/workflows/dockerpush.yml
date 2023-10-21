@@ -39,10 +39,10 @@ jobs:
       -
         name: Build and push
         uses: docker/build-push-action@v5
+        env:
+             SHA_SHORT: ${{ steps.vars.outputs.sha_short }}
         with:
          # context: "{{defaultContext}}:project1"
           file: ./project1/Dockerfile
           push: true
-          env:
-             SHA_SHORT: ${{ steps.vars.outputs.sha_short }}
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/2048-k8s:${{ SHA_SHORT }}
