@@ -20,7 +20,7 @@ jobs:
 
       - name: set outputs
         id: vars
-        run: echo "sha_short=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
+        run: echo "SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_OUTPUT
 
    #   - run: echo ${{ env.GITHUB_OUTPUT }}
 
@@ -43,6 +43,6 @@ jobs:
          # context: "{{defaultContext}}:project1"
           file: ./project1/Dockerfile
           push: true
-          env:
-            VERSION: {{ steps.vars.outputs.sha_short }}
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2048-k8s:${{ VERSION }}
+          env: 
+             SHA_SHORT: {{ steps.vars.outputs.sha_short }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/2048-k8s:${{ SHA_SHORT }}
