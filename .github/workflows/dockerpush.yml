@@ -9,8 +9,11 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./project1
     steps:
-      - run: cd /project1
+  
       -
         name: Checkout
         uses: actions/checkout@v3
