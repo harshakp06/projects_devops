@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: 2048-app
+  name: app-2048
   labels:
-    app: 2048-app
+    app: app-2048
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: 2048-app
+      app: app-2048
   template:
     metadata:
       labels:
-        app: 2048-app
+        app: app-2048
     spec:
       containers:
-      - name: 2048-app
+      - name: app-2048
         imagePullPolicy: Always
         image: 
         ports:
