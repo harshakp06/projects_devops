@@ -9,9 +9,9 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./project1
+   # defaults:
+    #  run:
+     #   working-directory: ./project1
     steps:
   
       -
