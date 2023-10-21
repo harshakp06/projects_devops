@@ -3,8 +3,13 @@ name: Push to docket hub
 
 on:
   push:
-    branches:
-      - 'main'
+    paths:
+    - 'project1/Dockerfile'
+
+
+   
+    #branches:
+     # - 'main'
 
 jobs:
   docker:
