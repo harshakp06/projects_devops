@@ -10,3 +10,4 @@ istioctl install --set profile=demo -y && kubectl apply -f samples/addons
 kubectl label namespace default istio-injection=enabled
 
 ```
+Addons will install Grafana, Prometheus, Jaeger, Kiali 
