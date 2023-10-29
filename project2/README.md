@@ -1,1 +1,2 @@
-This project is regarding the building and deploying the kodekloud ecommerce app
+# Deployment of 3 Tier app on K8S
+
