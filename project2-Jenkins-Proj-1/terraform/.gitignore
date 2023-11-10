@@ -14,6 +14,8 @@ crash.*.log
 # control as they are data points which are potentially sensitive and subject 
 # to change depending on the environment.
 *.tfvars
+*/*.tfvars
+.../*.tfvars
 *.tfvars.json
 
 # Ignore override files as they are usually used to override resources locally and so
@@ -38,3 +40,9 @@ terraform.rc
 *.terraform
 
 terraform.tfstate
+
+terraform.tfstate.backup
+
+*/*/terraform.tfstate.backup
+
+*/terraform.tfstate.backup
