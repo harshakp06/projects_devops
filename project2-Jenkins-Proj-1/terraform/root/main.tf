@@ -115,11 +115,12 @@ data "azurerm_ssh_public_key" "azureprojects" {
   resource_group_name = "sshkey"
 }
 
-resource "azurerm_linux_virtual_machine" "jenkins" {
+resource "azurerm_linux_virtual_machine" "jenkins" { 
   name                = "jenkins-machine"
   resource_group_name = azurerm_resource_group.jenkins.name
   location            = azurerm_resource_group.jenkins.location
-  size                = "Standard_F2"
+  size                = "Standard_B2s"
+                        # Standard_B2 # Standard_F2
   admin_username      = "adminuser"
   #user_data           = base64encode(templatefile("userdate.tftpl"))
   user_data           = base64encode(file("${path.module}/userdata.sh")) 
