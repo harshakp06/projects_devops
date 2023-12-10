@@ -30,7 +30,13 @@ pipeline {
 	    
        stage('Code-Compile') {
           steps {
-               sh "mvn clean compile"
+               sh "mvn compile"
+            }
+        }
+
+	stage('Run Test Cases') {
+            steps {
+                    sh "mvn test"
             }
         }
         
@@ -38,11 +44,11 @@ pipeline {
 	
         stage('Code-Build') {
             steps {
-               sh "mvn clean package"
+               sh "mvn clean compile"
             }
         }
 
-	stage("Sonarqube Analysis") {
+/*	stage("Sonarqube Analysis") {
             steps {
                 script {
                     withSonarQubeEnv(credentialsId: 'SonarCloud') {
@@ -51,7 +57,7 @@ pipeline {
                 }
             }
 
-        }
+        } */
        
         
     }
