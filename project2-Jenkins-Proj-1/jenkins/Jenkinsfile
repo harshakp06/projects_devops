@@ -12,7 +12,8 @@ pipeline {
               #  git branch: 'main', changelog: false, poll: false, url: 'https://github.com/jaiswaladi246/Devops-CICD.git'
           #  }
      #   }
-        
+
+	    
        stage('Code-Compile') {
           steps {
                sh "mvn clean compile"
