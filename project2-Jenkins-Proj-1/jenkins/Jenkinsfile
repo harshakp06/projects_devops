@@ -6,7 +6,8 @@ pipeline {
     }
 
     environment {
-       /* APP_NAME = "complete-prodcution-e2e-pipeline"
+       
+	    /* APP_NAME = "complete-prodcution-e2e-pipeline"
         RELEASE = "1.0.0"
         DOCKER_USER = "dmancloud"
         DOCKER_PASS = 'dockerhub'
@@ -16,7 +17,7 @@ pipeline {
 
 	SONAR = sonar
 
-    }
+     }
    
 
     stages {
