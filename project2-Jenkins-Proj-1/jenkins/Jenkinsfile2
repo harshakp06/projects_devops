@@ -48,12 +48,12 @@ pipeline {
         }
 
        
-        stage('Maven Build') {
+    /*    stage('Maven Build') {
             steps {
                     sh "mvn clean compile"
             }
         }
-        
+        */
     /*    stage('Docker Build & Push') {
             steps {
                    script {
