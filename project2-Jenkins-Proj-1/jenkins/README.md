@@ -11,5 +11,7 @@ adoptium for jdk11 - in the plugin settings - add name jdk11 - automatic update 
 for soanrqube will use sonarcloud -  SonarQube Scanner for Jenkins Version - SonarQube Generic Coverage Plugin Version 
 take token from sonarcloud - add as secret in jenkins
 
+use Github scm for automatic pulling and update of jenkinsfile and update builds 
+article for setup : https://www.blazemeter.com/blog/how-to-integrate-your-github-repository-to-your-jenkins-project
 
 
