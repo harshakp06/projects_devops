@@ -12,3 +12,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins -y
 sudo systemctl start jenkins.service 
+sudo apt install docker.io
+usermod -aG docker jenkins
+usermod -aG docker root
+systemctl restart docker
