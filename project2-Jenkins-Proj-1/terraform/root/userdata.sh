@@ -16,3 +16,7 @@ sudo apt install docker.io
 usermod -aG docker jenkins
 usermod -aG docker root
 systemctl restart docker
+sudo apt autoremove
+sudo apt remove
+sudo apt autoclean
+sudo apt clean
