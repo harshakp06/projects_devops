@@ -1,5 +1,10 @@
 #! /usr/bin/env bash
 
+set -x
+
+set -e
+
+
 sudo apt update && sudo apt upgrade -y
 sudo apt update
 sudo apt install fontconfig openjdk-17-jre -y
